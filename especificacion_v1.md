@@ -85,8 +85,16 @@ La interfaz, el sensor y la bomba se encuentran pendientes de integración y pru
 
 ## 11. Criterios de aceptación
 
-El MVP se considerará validado cuando las lecturas sean interpretadas correctamente, la lógica de control responda a las condiciones configuradas, el nivel bajo impida activar la bomba, la comunicación funcione y las pruebas documentadas se hayan ejecutado satisfactoriamente.
+El MVP se considerará validado cuando:
 
+- Las lecturas del sensor sean interpretadas correctamente.
+- La lógica de control responda al umbral de humedad configurado.
+- La bomba permanezca apagada cuando el depósito indique un nivel bajo de agua.
+- La aplicación y la Raspberry Pi Pico puedan intercambiar información mediante comunicación serial USB.
+- Los errores de lectura y comunicación se manejen de forma segura.
+- Las pruebas de funcionamiento se documenten con sus resultados reales.
+
+**Estado actual:** las pruebas automatizadas de la lógica de Python se han ejecutado correctamente. La integración con la Raspberry Pi Pico, el sensor, el interruptor de flotador y la bomba sigue pendiente de implementación y validación física.
 ## 12. Estado actual y pendientes
 
 Esta especificación describe el diseño propuesto. La compra de componentes, el montaje del circuito, la calibración y las pruebas físicas están pendientes. Los resultados se documentarán cuando se ejecuten realmente.
