@@ -39,3 +39,6 @@ Las pruebas de software realizadas hasta el momento han finalizado correctamente
 - Montar y probar el circuito de control de la bomba.
 - Implementar y comprobar la comunicación entre la placa y el computador.
 - Documentar las pruebas físicas cuando se realicen.
+## Revisión del proyecto
+
+La documentación y las pruebas de software se actualizarán a medida que avance el desarrollo.
