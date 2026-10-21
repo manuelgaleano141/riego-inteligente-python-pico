@@ -22,11 +22,11 @@ Documentar el uso de herramientas de inteligencia artificial como apoyo para dis
 
 **Decisión del equipo:** Ejecutar una prueba controlada desde la terminal de Python.
 
-**Verificación:** La función devolvió `Decision(pump_on=False, reason='humedad_invalida')`, sin generar una excepción.tr
+**Verificación:** La función devolvió `Decision(pump_on=False, reason='humedad_invalida')`, sin generar una excepción.
 
 ## Consulta 3: Documentación de pruebas
 
-**Pregunta realizada:** ¿Cómo registrar los resultados de las pruebas en GitH
+**Pregunta realizada:** ¿Cómo registrar los resultados de las pruebas en GitHub?
 
 **Resumen de la respuesta:** Se recomendó documentar el comando ejecutado, el resultado observado y las limitaciones de las pruebas.
 
@@ -37,4 +37,5 @@ Documentar el uso de herramientas de inteligencia artificial como apoyo para dis
 ## Limitaciones y observaciones
 
 La inteligencia artificial se utilizó como apoyo para el desarrollo y la documentación. Las respuestas se contrastaron mediante pruebas de software cuando fue posible.
+
 Las pruebas realizadas validan la lógica de Python, pero no demuestran el funcionamiento físico de la Raspberry Pi Pico, el sensor de humedad ni la bomba. La integración y las pruebas del hardware siguen pendientes.
