@@ -63,6 +63,6 @@ def decide_watering(
 
 
 if __name__ == "__main__":
-    # Ejemplo sencillo de funcionamiento
     resultado = decide_watering(20, True)
     print(resultado)
+
