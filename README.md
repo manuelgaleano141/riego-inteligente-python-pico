@@ -1,41 +1,41 @@
-# Entrega — Sesión 5: Git y GitHub
+# Sistema de Riego Inteligente
 
-**Integrantes:** Emmanuel Franco Lopez y Manuel Galeano Alarcon  
-**Proyecto:** Sistema de Riego Inteligente Automatizado con Python y Raspberry Pi Pico  
-**Estado:** propuesta preliminar; componentes no comprados y pruebas físicas pendientes.
+**Integrantes:** Emmanuel Franco Lopez y Manuel Galeano Alarcon
 
+## Descripción del proyecto
 
-## Nombre del repositorio
-`riego-inteligente-python-pico`
+El proyecto busca desarrollar un sistema de riego inteligente que permita controlar el riego de una planta según la humedad del suelo y la disponibilidad de agua en el depósito.
 
-## Problema, objetivo y alcance del MVP
-El riego manual puede ser irregular. El objetivo es diseñar un prototipo que lea humedad y controle el riego con bloqueo por depósito vacío. El MVP incluye lógica de control, futura conexión a Raspberry Pi Pico con MicroPython y una aplicación Python de escritorio. El montaje y la calibración están pendientes.
+La idea es utilizar una Raspberry Pi Pico RP2040 con MicroPython para controlar los sensores y la bomba de agua, además de un programa en Python para visualizar información desde el computador.
 
-## Estructura propuesta
-```text
-README.md
-docs/
-src/
-tests/
-evidencias/
-```
+## Objetivo
 
-## Acuerdo de colaboración
-Roles propuestos, confirmar entre los dos:
-- Emmanuel Franco Lopez: documentación y revisión.
-- Manuel Galeano Alarcon: integración de código y mantenimiento del repositorio.
-Ambos revisarán cambios y registrarán únicamente pruebas reales.
+Automatizar el riego de una planta y evitar que la bomba funcione cuando no haya suficiente agua en el depósito.
 
-## Primer commit sugerido
-```bash
-git init
-git add README.md docs src tests
-git commit -m "Agrega estructura inicial y especificación del proyecto"
-```
-Estos son comandos sugeridos; no prueban que se haya creado un commit. Después de crear el repositorio remoto, agregar la URL real y hacer `git push`.
+## Alcance actual
 
-## Cambio controlado y revisión por pares
-Crear una rama, modificar una parte pequeña de la especificación, revisar con `git diff`, ejecutar pruebas pertinentes, crear un commit y abrir un pull request para que el compañero revise. Agregar el enlace real del PR y la observación cuando se haya hecho.
+Por ahora, el proyecto se encuentra en etapa de desarrollo. Se ha trabajado en la lógica de control en Python y se han ejecutado pruebas automatizadas. Todavía falta comprar los componentes, realizar el montaje y comprobar el funcionamiento físico del sistema.
 
-## Evidencia del cambio revisado
-Pendiente de completar con hash real del commit, fecha, autor, revisor, comentario y enlace.
+## Archivos del proyecto
+
+- `control.py`: lógica de control del riego.
+- `test_control.py`: pruebas automatizadas del programa.
+- `especificacion_v1.md`: requisitos y funcionamiento esperado.
+- `prompt_tecnico_v1.md`: instrucciones técnicas para desarrollar el proyecto.
+- `problemas_ambiguedades.md`: dudas y aspectos pendientes de definir.
+- `registro_uso_IA.md`: registro del uso de inteligencia artificial.
+- `registro_debugging.md`: registro de pruebas y depuración.
+- `acuerdo_equipo.md`: acuerdo de colaboración del equipo.
+- `evidencias/`: evidencias de las pruebas realizadas.
+
+## Estado del proyecto
+
+Las pruebas de software realizadas hasta el momento han finalizado correctamente. La integración con la Raspberry Pi Pico, los sensores y la bomba de agua está pendiente.
+
+## Trabajo pendiente
+
+- Definir y calibrar el umbral de humedad con el sensor real.
+- Verificar el funcionamiento del sensor de nivel de agua.
+- Montar y probar el circuito de control de la bomba.
+- Implementar y comprobar la comunicación entre la placa y el computador.
+- Documentar las pruebas físicas cuando se realicen.
