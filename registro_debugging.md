@@ -54,3 +54,12 @@ Para completar el proceso de depuración solicitado en la sesión 4, queda pendi
 ## 6. Conclusión
 
 Se dispone de evidencia de ocho pruebas automatizadas satisfactorias. La depuración de un fallo reproducible, la validación de cualquier corrección y las pruebas físicas del sistema continúan pendientes. No se afirma que se haya corregido un fallo que no haya sido reproducido.
+## 7. Prueba controlada de entrada inválida
+
+- **Objetivo:** comprobar cómo responde la función ante una lectura de humedad que no es numérica.
+- **Función evaluada:** `decide_watering()`.
+- **Entrada utilizada:** `'invalido'`, con `tank_has_water=True`.
+- **Comando ejecutado:** `py -c "from control import decide_watering; print(decide_watering('invalido', True))"`
+- **Resultado observado:** `Decision(pump_on=False, reason='humedad_invalida')`.
+- **Interpretación:** la función rechazó la lectura inválida, mantuvo la bomba apagada y devolvió una razón descriptiva sin generar una excepción.
+- **Conclusión:** el caso probado se maneja de forma controlada. Esta prueba no demuestra el funcionamiento del hardware físico.
