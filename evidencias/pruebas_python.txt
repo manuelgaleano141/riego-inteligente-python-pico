@@ -1,0 +1,18 @@
+EVIDENCIA DE PRUEBAS AUTOMATIZADAS
+
+Proyecto: Sistema de Riego Inteligente Automatizado
+Archivo de pruebas: test_control.py
+
+Comando ejecutado:
+py -m unittest -v test_control.py
+
+Resultado observado:
+Ran 8 tests
+OK
+
+Estado: Las 8 pruebas automatizadas finalizaron correctamente.
+
+Alcance:
+Estas pruebas validan la lógica de control en Python.
+No verifican el funcionamiento físico de la Raspberry Pi Pico,
+el sensor de humedad ni la bomba de agua.
