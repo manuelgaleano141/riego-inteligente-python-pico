@@ -1,28 +1,41 @@
-# Entrega — Sesión 4: Debugging con IA
+# Entrega — Sesión 5: Git y GitHub
 
 **Integrantes:** Emmanuel Franco Lopez y Manuel Galeano Alarcon  
 **Proyecto:** Sistema de Riego Inteligente Automatizado con Python y Raspberry Pi Pico  
 **Estado:** propuesta preliminar; componentes no comprados y pruebas físicas pendientes.
 
 
-## 1. Módulo ejecutable
-El archivo `control.py` contiene una función de lógica que se puede ejecutar y probar sin hardware. Es una base de referencia, no un sistema físico validado.
+## Nombre del repositorio
+`riego-inteligente-python-pico`
 
-## 2. Pruebas documentadas
-Los casos están en `test_control.py`. Ejecutar desde esta carpeta:
-```bash
-python -m unittest -v test_control.py
+## Problema, objetivo y alcance del MVP
+El riego manual puede ser irregular. El objetivo es diseñar un prototipo que lea humedad y controle el riego con bloqueo por depósito vacío. El MVP incluye lógica de control, futura conexión a Raspberry Pi Pico con MicroPython y una aplicación Python de escritorio. El montaje y la calibración están pendientes.
+
+## Estructura propuesta
+```text
+README.md
+docs/
+src/
+tests/
+evidencias/
 ```
-Las pruebas deben ejecutarse en el equipo del grupo y guardar la salida real como evidencia.
 
-## 3. Intento de ruptura propuesto
-Solicitar riego manual con el depósito vacío y humedad baja. Resultado esperado: la decisión mantiene la bomba apagada. Marcar como pendiente hasta ejecutarlo.
+## Acuerdo de colaboración
+Roles propuestos, confirmar entre los dos:
+- Emmanuel Franco Lopez: documentación y revisión.
+- Manuel Galeano Alarcon: integración de código y mantenimiento del repositorio.
+Ambos revisarán cambios y registrarán únicamente pruebas reales.
 
-## 4. Registro de debugging con IA
-No se inventan fallos experimentales. Registrar cualquier fallo que realmente ocurra con el formato de `registro_debugging.md`.
+## Primer commit sugerido
+```bash
+git init
+git add README.md docs src tests
+git commit -m "Agrega estructura inicial y especificación del proyecto"
+```
+Estos son comandos sugeridos; no prueban que se haya creado un commit. Después de crear el repositorio remoto, agregar la URL real y hacer `git push`.
 
-## 5. Corrección, validación y regresión
-Después de un cambio, ejecutar todas las pruebas y registrar salida anterior y posterior. La evidencia de lógica no valida sensores, bomba ni comunicación serial.
+## Cambio controlado y revisión por pares
+Crear una rama, modificar una parte pequeña de la especificación, revisar con `git diff`, ejecutar pruebas pertinentes, crear un commit y abrir un pull request para que el compañero revise. Agregar el enlace real del PR y la observación cuando se haya hecho.
 
-## 6. Defensa oral de dos minutos
-“Somos Emmanuel Franco Lopez y Manuel Galeano Alarcon. Proponemos un sistema de riego con Raspberry Pi Pico y MicroPython. La lógica recibe la humedad, verifica el nivel del depósito y decide si permite regar. Hemos separado la lógica para poder probar casos de seguridad antes de montar el circuito. En esta etapa el hardware no se ha comprado ni probado físicamente, así que no confundimos los casos definidos con pruebas físicas realizadas. El siguiente paso es ejecutar las pruebas automatizadas, documentar fallos reales y validar los componentes y conexiones antes de afirmar que el prototipo funciona.”
+## Evidencia del cambio revisado
+Pendiente de completar con hash real del commit, fecha, autor, revisor, comentario y enlace.
