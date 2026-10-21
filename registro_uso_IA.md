@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Documentar el uso de herramientas de inteligencia artificial como apoyo para diseñar, desarrollar y verificar el sistema de riego inteligente.
+Documentar el uso de herramientas de inteligencia artificial como apoyo para diseñar, desarrollar, probar y mejorar el sistema de riego inteligente.
 
 ## Consulta 1: Diseño de la lógica de control
 
@@ -12,7 +12,7 @@ Documentar el uso de herramientas de inteligencia artificial como apoyo para dis
 
 **Decisión del equipo:** Utilizar la propuesta como base para el módulo `control.py`, revisando su lógica antes de aceptarla.
 
-**Verificación:** Se ejecutaron las pruebas automatizadas de `test_control.py`. Las ocho pruebas finalizaron correctamente con el resultado `OK`.
+**Verificación:** Se ejecutaron pruebas automatizadas para comprobar el comportamiento de la función.
 
 ## Consulta 2: Manejo de entradas inválidas
 
@@ -24,18 +24,28 @@ Documentar el uso de herramientas de inteligencia artificial como apoyo para dis
 
 **Verificación:** La función devolvió `Decision(pump_on=False, reason='humedad_invalida')`, sin generar una excepción.
 
-## Consulta 3: Documentación de pruebas
+## Consulta 3: Corrección de un error en el umbral
 
-**Pregunta realizada:** ¿Cómo registrar los resultados de las pruebas en GitHub?
+**Problema encontrado:** Una prueba mostró que el programa aceptaba `True` como umbral de humedad, aunque debía considerarlo inválido.
 
-**Resumen de la respuesta:** Se recomendó documentar el comando ejecutado, el resultado observado y las limitaciones de las pruebas.
+**Apoyo de la IA:** Se utilizó ChatGPT para revisar la validación y proponer una corrección que rechazara los valores booleanos.
 
-**Decisión del equipo:** Crear el archivo `evidencias/pruebas_python.txt`.
+**Decisión del equipo:** Modificar la condición de validación en `control.py`.
 
-**Verificación:** Se comprobó que el archivo aparece en el repositorio de GitHub.
+**Verificación:** Se ejecutó nuevamente `py -m unittest -v test_control.py`. Las 12 pruebas finalizaron correctamente con el resultado `OK`.
+
+## Consulta 4: Documentación de las pruebas
+
+**Pregunta realizada:** ¿Cómo registrar los resultados de las pruebas y las limitaciones del proyecto?
+
+**Resumen de la respuesta:** Se recomendó documentar los comandos utilizados, los resultados observados, los errores encontrados y las correcciones realizadas.
+
+**Decisión del equipo:** Registrar los resultados en `registro_debugging.md` y conservar la captura de la terminal como evidencia.
+
+**Verificación:** Se comprobó en la terminal que las 12 pruebas automatizadas pasaron después de la corrección.
 
 ## Limitaciones y observaciones
 
-La inteligencia artificial se utilizó como apoyo para el desarrollo y la documentación. Las respuestas se contrastaron mediante pruebas de software cuando fue posible.
+La inteligencia artificial se utilizó como apoyo para el desarrollo, la depuración y la documentación. Las propuestas se comprobaron mediante pruebas de software cuando fue posible.
 
-Las pruebas realizadas validan la lógica de Python, pero no demuestran el funcionamiento físico de la Raspberry Pi Pico, el sensor de humedad ni la bomba. La integración y las pruebas del hardware siguen pendientes.
+Las pruebas realizadas validan la lógica de Python, pero no demuestran el funcionamiento físico de la Raspberry Pi Pico, los sensores ni la bomba. La integración y las pruebas del hardware siguen pendientes.
