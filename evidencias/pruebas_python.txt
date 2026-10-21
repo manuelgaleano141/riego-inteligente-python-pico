@@ -7,12 +7,27 @@ Comando ejecutado:
 py -m unittest -v test_control.py
 
 Resultado observado:
-Ran 8 tests
+Ran 12 tests in 0.003s
 OK
 
-Estado: Las 8 pruebas automatizadas finalizaron correctamente.
+Estado:
+Las 12 pruebas automatizadas finalizaron correctamente después de corregir la validación del umbral de humedad.
+
+Casos comprobados:
+- Suelo seco.
+- Suelo húmedo.
+- Depósito vacío en modo automático.
+- Depósito vacío en modo manual.
+- Modo de funcionamiento inválido.
+- Lectura de humedad fuera de rango.
+- Tipo de dato inválido.
+- Solicitud manual de riego.
+- Humedad negativa.
+- Tipo de dato inválido para el depósito.
+- Umbral inválido.
+- Umbral booleano inválido.
 
 Alcance:
-Estas pruebas validan la lógica de control en Python.
-No verifican el funcionamiento físico de la Raspberry Pi Pico,
-el sensor de humedad ni la bomba de agua.
+Estas pruebas validan la lógica de control en Python. No verifican el funcionamiento físico de la Raspberry Pi Pico, el sensor de humedad ni la bomba de agua.
+
+La captura de la terminal se conserva como evidencia visual de la ejecución.
