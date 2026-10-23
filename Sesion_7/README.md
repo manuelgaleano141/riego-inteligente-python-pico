@@ -1,9 +1,3 @@
-# Sesión 7: Arquitectura y Modularidad
+# Evidencias
 
-Proyecto: Sistema de Riego Inteligente Automatizado con Python y Raspberry Pi Pico.
-
-Esta carpeta contiene el código modular, las pruebas automatizadas, el diagrama de arquitectura, la documentación y las evidencias correspondientes a la Sesión 7.
-
-## Pruebas
-
-Se ejecutaron 43 pruebas automatizadas y el resultado fue OK.
+`pruebas_logica_python.txt` contiene la salida de la ejecución de las pruebas automatizadas sobre datos simulados. Esta evidencia no certifica funcionamiento físico del sensor ni de la bomba.
