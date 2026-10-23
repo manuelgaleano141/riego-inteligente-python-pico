@@ -1,0 +1,63 @@
+test_deposito_vacio (test_control.TestDecideWatering.test_deposito_vacio) ... ok
+test_humedad_invalida (test_control.TestDecideWatering.test_humedad_invalida) ... ok
+test_humedad_suficiente (test_control.TestDecideWatering.test_humedad_suficiente) ... ok
+test_manual_activado (test_control.TestDecideWatering.test_manual_activado) ... ok
+test_manual_desactivado (test_control.TestDecideWatering.test_manual_desactivado) ... ok
+test_modo_invalido (test_control.TestDecideWatering.test_modo_invalido) ... ok
+test_nivel_invalido (test_control.TestDecideWatering.test_nivel_invalido) ... ok
+test_suelo_seco (test_control.TestDecideWatering.test_suelo_seco) ... ok
+test_umbral_igual (test_control.TestDecideWatering.test_umbral_igual) ... ok
+test_umbral_invalido (test_control.TestDecideWatering.test_umbral_invalido) ... ok
+test_bool (test_control.TestValidarHumedad.test_bool) ... ok
+test_decimal_valido (test_control.TestValidarHumedad.test_decimal_valido) ... ok
+test_entero_valido (test_control.TestValidarHumedad.test_entero_valido) ... ok
+test_infinito (test_control.TestValidarHumedad.test_infinito) ... ok
+test_lectura_cero (test_control.TestValidarHumedad.test_lectura_cero) ... ok
+test_lectura_cien (test_control.TestValidarHumedad.test_lectura_cien) ... ok
+test_mayor_cien (test_control.TestValidarHumedad.test_mayor_cien) ... ok
+test_nan (test_control.TestValidarHumedad.test_nan) ... ok
+test_negativo (test_control.TestValidarHumedad.test_negativo) ... ok
+test_none (test_control.TestValidarHumedad.test_none) ... ok
+test_texto (test_control.TestValidarHumedad.test_texto) ... ok
+test_ausente (test_diagnostico.TestDiagnostico.test_ausente) ... ok
+test_fuera_de_rango_alta (test_diagnostico.TestDiagnostico.test_fuera_de_rango_alta) ... ok
+test_fuera_de_rango_baja (test_diagnostico.TestDiagnostico.test_fuera_de_rango_baja) ... ok
+test_humedad_alta (test_diagnostico.TestDiagnostico.test_humedad_alta) ... ok
+test_humedad_baja (test_diagnostico.TestDiagnostico.test_humedad_baja) ... ok
+test_no_finita (test_diagnostico.TestDiagnostico.test_no_finita) ... ok
+test_tipo_invalido (test_diagnostico.TestDiagnostico.test_tipo_invalido) ... ok
+test_valida (test_diagnostico.TestDiagnostico.test_valida) ... ok
+test_deposito_vacio_no_activa_bomba (test_integracion.TestIntegracion.test_deposito_vacio_no_activa_bomba) ... ok
+test_humedad_baja_activa_bomba (test_integracion.TestIntegracion.test_humedad_baja_activa_bomba) ... ok
+test_lectura_ausente_no_activa_bomba (test_integracion.TestIntegracion.test_lectura_ausente_no_activa_bomba) ... ok
+test_lectura_fuera_de_rango_no_activa_bomba (test_integracion.TestIntegracion.test_lectura_fuera_de_rango_no_activa_bomba) ... ok
+test_archivo_inexistente (test_registro.TestRegistro.test_archivo_inexistente) ... ok
+test_dos_eventos (test_registro.TestRegistro.test_dos_eventos) ... ok
+test_lee_evento (test_registro.TestRegistro.test_lee_evento) ... ok
+test_registra_evento (test_registro.TestRegistro.test_registra_evento) ... ok
+test_registro_rechaza_ruta_invalida (test_registro.TestRegistro.test_registro_rechaza_ruta_invalida) ... ok
+test_ignora_lecturas_mas_alla_del_limite (test_reintentos.TestReintentos.test_ignora_lecturas_mas_alla_del_limite) ... ok
+test_lectura_valida_despues_de_error (test_reintentos.TestReintentos.test_lectura_valida_despues_de_error) ... ok
+test_lectura_valida_primera (test_reintentos.TestReintentos.test_lectura_valida_primera) ... ok
+test_max_attempts_invalido (test_reintentos.TestReintentos.test_max_attempts_invalido) ... ok
+test_se_agotan_intentos (test_reintentos.TestReintentos.test_se_agotan_intentos) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 0.005s
+
+OK
+ERROR: no se pudo registrar el evento: [Errno 17] File exists: '/tmp/tmpyat8786k/archivo'
+ERROR: lectura -1. Motivo: humedad_fuera_de_rango. Intento 1 de 1.
+No quedan mas intentos.
+ALERTA: no se obtuvo una lectura valida en 1 intentos. Bomba apagada.
+ERROR: lectura -1. Motivo: humedad_fuera_de_rango. Intento 1 de 3.
+Reintentando lectura...
+Lectura valida: 20%
+Lectura valida: 20%
+ERROR: lectura -1. Motivo: humedad_fuera_de_rango. Intento 1 de 3.
+Reintentando lectura...
+ERROR: lectura 150. Motivo: humedad_fuera_de_rango. Intento 2 de 3.
+Reintentando lectura...
+ERROR: lectura None. Motivo: humedad_invalida. Intento 3 de 3.
+No quedan mas intentos.
+ALERTA: no se obtuvo una lectura valida en 3 intentos. Bomba apagada.
